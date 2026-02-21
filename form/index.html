@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+<body>
+    <form action="/confirm-form" autocomplete="on" method="POST">
+        <fieldset>
+            <legend>Registration Form</legend>
+            <div class="form-part">
+                <label for="first-name">First name:</label>
+                <input type="text" id="first-name" placeholder="Ilya" minlength="2" required>
+            </div>
+
+            <div class="form-part">
+                <label for="last-name">Last name:</label>
+                <input type="text" id="last-name" placeholder="Tolstenkov" minlength="2" required>
+            </div>
+            
+            <div class="form-part">
+                <label for="age">Age:</label>
+                <input type="number" id="age" placeholder="42" minlength="2" value="42" required>
+            </div>
+
+            <div class="form-part">
+                <label for="phone-number">Phone number:</label>
+                <input type="tel" id="phone-number" placeholder="+375291234567" pattern="+375[0-9]{9}" maxlength="13" required>
+            </div>
+
+            <div class="form-part">
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="***(min length = 8)" minlength="8" required>
+            </div>
+
+            <div class="form-part">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="name@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+            </div>
+
+            <div class="form-part">
+                <label for="city">City:</label>
+                <select id="city" name="city" required>
+                    <option value="" selected>Select city</option>
+                    <option value="brest">Brest</option>
+                    <option value="vitebsk">Vitebsk</option>
+                    <option value="gomel">Gomel</option>
+                    <option value="grodno">Grodno</option>
+                    <option value="minsk">Minsk</option>
+                    <option value="mogilev">Mogilev</option>
+                </select>
+            </div>
+
+            <div class="form-part radio-group">
+                <p>How we knew about us:</p>
+                <div class="radio-option">
+                    <input type="radio" name="recognition" value="friends" id="radio-friends" required>
+                    <label for="radio-friends">From friends</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="recognition" value="Internet" id="radio-internet">
+                    <label for="radio-internet">On the Internet</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="recognition" value="advertisment" id="radio-advertisment">
+                    <label for="radio-advertisment">From advertisment</label>
+                </div>
+            </div>
+            
+            <div class="form-part">
+                <label for="disabled-input">Disabled field:</label>
+                <input type="text" id="disabled-input" value="Test-data" disabled>
+            </div>
+
+            <div class="form-part">
+                <label for="comment">Comment:</label>
+                <textarea name="comment-area" id="comment" placeholder="I like eat hotdogs..."></textarea>
+            </div>
+
+            <div class="form-part checkbox-group">
+                <input type="checkbox" id="accept-conditions" >
+                <label for="accept-conditions">I accept the conditions of company</label>
+            </div>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>
