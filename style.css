@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+header {
+    text-align: center;
+    padding: 5px 0;
+    background: #6aeeb5;
+    margin-bottom: 20px;
+    max-height: 50px;
+    font-size: 1.6em;
+}
+
+main {
+    display: grid;
+    grid-template-columns: minmax(200px, 400px) auto;
+    align-items: center;
+    padding: 15px;
+    max-width: 1500px;
+    margin: 0 auto;
+    gap: 20px;
+
+    & aside {
+        align-self: start;
+        max-height: 50%;
+        height: 100%;
+        padding: 20px;
+        background: #559fee;
+        color: #fff;
+        border-radius: 15px;
+
+        & h2 {
+            color: #000;
+            margin-bottom: 15px;
+        }
+    }
+
+    & .container-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(200px, auto));
+        grid-gap: 10px;
+        margin-bottom: 100px;
+
+        & .grid-item {
+            border: 1px solid #fd9c9c;
+            padding: 10px;
+            border-radius: 10px;
+            max-height: 200px;
+            overflow: hidden;
+
+            & h3 {
+                font-size: 1.4em;
+                margin-bottom: 10px;
+            }
+
+            & p {
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}
+
+footer {
+    background: #ec5a5a;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    max-height: 50px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    main {
+        grid-template-columns: auto;
+
+        & aside {
+            max-height: 100px;
+            overflow-y: scroll;
+        }
+
+        & .container-grid {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        & .container-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    main {
+        & .container-grid {
+            grid-template-columns: auto;
+        }
+    }
+}
