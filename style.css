@@ -42,7 +42,7 @@ main {
     & .cards {
 
         & .card {
-            animation: fade-in 3s ease .1s 1 forwards;
+            animation: fade-in 3s ease .1s 1 normal;
             max-width: 300px;
             text-align: center;
             padding: 60px 20px 40px;
@@ -50,7 +50,17 @@ main {
             background: linear-gradient(to right, #ff0000, #bf00ff);
             box-shadow: 10px 10px 50px #000;
             transition: .3s;
+            
+            &:hover {
+                background: radial-gradient(circle, #0008ff, #00ff5e);
+                transform: scale(1.1) translate(35px, -20px);
+                opacity: 0.85;
+            }
 
+            &:active {
+                transform: rotate(10deg) skewX(5deg) scale(1.2);
+            }
+            
             & figure {
 
                 & img {
@@ -75,15 +85,7 @@ main {
                 }
             }
 
-            &:hover {
-                background: radial-gradient(circle, #0008ff, #00ff5e);
-                transform: scale(1.1) translate(35px, -20px);
-                opacity: 0.85;
-            }
-
-            &:active {
-                transform: rotate(10deg) skewX(5deg) scale(1.2);
-            }
+            
         }
     }
 }
