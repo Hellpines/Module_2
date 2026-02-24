@@ -18,7 +18,7 @@ header {
         color: #000;
     }
 
-    & .logo-icon{
+    & figure .logo-icon{
         width: 50px;
         margin-left: 10px;
     }
