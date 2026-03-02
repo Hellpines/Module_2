@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.table-wrapper {
+    width: 600px;
+    height: 400px;
+    margin: 50px auto;
+    overflow: auto;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    font-family: Arial;
+    border: 2px solid #000;
+
+    & caption {
+        font-weight: 600;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    & th, td {
+        border: 1px solid #000;
+        padding: 10px 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 150px;
+        text-overflow: ellipsis;
+    }
+
+    & thead {
+        background: #cef1f2;
+
+        & th {
+            text-align: center;
+            font-style: italic;
+        }
+    }
+
+    & tbody {
+        & th[scope="row"] {
+            text-align: right;
+            background: #fab3b3;
+            font-weight: bold;
+        }
+
+        & td {
+            max-width: 150px;
+            background: #ede8e8;
+        }
+    }
+
+    & tfoot {
+        background: #f7ca8b;
+
+        & th, td {
+            font-weight: bold;
+            font-style: italic;
+        }
+    }
+}

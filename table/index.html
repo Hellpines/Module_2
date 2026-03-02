@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Table</title>
+</head>
+<body>
+
+<div class="table-wrapper">
+    <table>
+        <caption>Список сотрудников</caption>
+
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Post</th>
+                <th>Department</th>
+                <th>Start of contract</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th scope="row">Tolstenkov Ilya</th>
+                <td>Software Engineer Trainee</td>
+                <td rowspan="5">Front-end</td>
+                <td>10.02.2026</td>
+                <td>100$</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Ivanov Ivan</th>
+                <td>Software Engineer Junior</td>
+                <td>11.11.2025</td>
+                <td>500$</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Drazdou Max</th>
+                <td>CTO</td>
+                <td>01.02.2025</td>
+                <td>2500$</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Kantsevaya Veranika</th>
+                <td>Software Engineer Trainee</td>
+                <td>10.02.2026</td>
+                <td>100$</td>
+            </tr>
+
+            <tr>
+                <th scope="row">Ivanova Yulia</th>
+                <td>HR-specialist</td>
+                <td>03.03.2025</td>
+                <td>1200$</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th scope="row">Total:</th>
+                <td colspan="4">5 employees</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+</body>
+</html>
