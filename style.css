@@ -85,7 +85,6 @@ main {
             text-indent: 40px;
             text-align: center;
             width: 800px;
-            margin: auto;
         }
     }
 
@@ -155,17 +154,18 @@ main {
                 align-items: center;
                 gap: 10px;
                 color: #000;
-                & img {
+                & svg {
                     width: 20px;
                     height: 20px;
-                    &:hover {
-                        filter: brightness(0) saturate(100%) invert(34%) sepia(98%) saturate(749%) hue-rotate(191deg) brightness(92%) contrast(101%);
-                    }
                 }
                 &:hover {
                     color: blue;
                     transition: .1s;
-                    text-decoration: underline #000;
+                    text-decoration: underline blue;
+
+                    & svg {
+                        fill: blue;
+                    }
                 }
             }
         }
