@@ -10,12 +10,25 @@ header {
     position: relative;
     align-items: center;
     max-width: 1280px;
-    margin: 30px auto;
+    margin: 2% auto;
     font-family: Arial;
     
     & a {
         text-decoration: none;
         color: #000;
+
+        &:hover {
+            color: rgb(172, 105, 46);
+        }
+        
+        &:focus {
+            outline: 2px solid rgb(151, 89, 34);
+            outline-offset: 5px;
+        }
+        
+        &:active {
+            color: rgb(100, 60, 20);
+        }
     }
 
     & figure .logo-icon{
@@ -38,8 +51,9 @@ header {
     }
 
     & nav{
+        width: 30%;
         display: flex;
-        gap: 50px;
+        justify-content: space-between;
     }
 
     
@@ -49,9 +63,26 @@ header {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     header .burger-menu{
         display: block;
+        
+        &:hover img {
+            transform: scale(1.1);
+        }
+        
+        &:focus {
+            outline: 2px solid rgb(151, 89, 34);
+            outline-offset: 2px;
+        }
+        
+        &:hover img {
+            transform: scale(1.1);
+        }
+        
+        &:active img {
+            transform: scale(0.95);
+        }
     }
 
     header nav {
