@@ -12,32 +12,32 @@
             <legend>Registration Form</legend>
             <div class="form-part">
                 <label for="first-name">First name:</label>
-                <input type="text" id="first-name" placeholder="Ilya" minlength="2" required>
+                <input type="text" id="first-name" name="firstName" placeholder="Ilya" minlength="2" required>
             </div>
 
             <div class="form-part">
                 <label for="last-name">Last name:</label>
-                <input type="text" id="last-name" placeholder="Tolstenkov" minlength="2" required>
+                <input type="text" id="last-name" name="lastName" placeholder="Tolstenkov" minlength="2" required>
             </div>
             
             <div class="form-part">
                 <label for="age">Age:</label>
-                <input type="number" id="age" placeholder="42" minlength="2" value="42" required>
+                <input type="text" id="age" name="age" pattern="\d*" placeholder="42" value="42" minlength="1" maxlength="3" required>
             </div>
 
             <div class="form-part">
                 <label for="phone-number">Phone number:</label>
-                <input type="tel" id="phone-number" placeholder="+375291234567" pattern="+375[0-9]{9}" maxlength="13" required>
+                <input type="tel" id="phone-number" name="phoneNumber" placeholder="+375291234567" pattern="^\+[1-9]\d{1,14}$" maxlength="15" required>
             </div>
 
             <div class="form-part">
                 <label for="password">Password:</label>
-                <input type="password" id="password" placeholder="***(min length = 8)" minlength="8" required>
+                <input type="password" id="password" name="password" placeholder="***(min length = 8)" minlength="8" required>
             </div>
 
             <div class="form-part">
                 <label for="email">Email:</label>
-                <input type="email" id="email" placeholder="name@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                <input type="email" id="email" name="email" placeholder="name@gmail.com" required>
             </div>
 
             <div class="form-part">
@@ -53,34 +53,34 @@
                 </select>
             </div>
 
-            <div class="form-part radio-group">
-                <p>How we knew about us:</p>
+            <fieldset class="form-part radio-group">
+                <legend>How we knew about us:</legend>
                 <div class="radio-option">
                     <input type="radio" name="recognition" value="friends" id="radio-friends" required>
                     <label for="radio-friends">From friends</label>
                 </div>
                 <div class="radio-option">
-                    <input type="radio" name="recognition" value="Internet" id="radio-internet">
+                    <input type="radio" name="recognition" value="internet" id="radio-internet" required>
                     <label for="radio-internet">On the Internet</label>
                 </div>
                 <div class="radio-option">
-                    <input type="radio" name="recognition" value="advertisment" id="radio-advertisment">
-                    <label for="radio-advertisment">From advertisment</label>
+                    <input type="radio" name="recognition" value="advertisement" id="radio-advertisement" required>
+                    <label for="radio-advertisement">From advertisement</label>
                 </div>
-            </div>
+            </fieldset>
             
             <div class="form-part">
                 <label for="disabled-input">Disabled field:</label>
-                <input type="text" id="disabled-input" value="Test-data" disabled>
+                <input type="text" id="disabled-input" name="disabledField" value="Test-data" disabled>
             </div>
 
             <div class="form-part">
                 <label for="comment">Comment:</label>
-                <textarea name="comment-area" id="comment" placeholder="I like eat hotdogs..."></textarea>
+                <textarea name="comment" id="comment" placeholder="I like eat hotdogs..." required></textarea>
             </div>
 
             <div class="form-part checkbox-group">
-                <input type="checkbox" id="accept-conditions" >
+                <input type="checkbox" name="acceptConditions" id="accept-conditions" required>
                 <label for="accept-conditions">I accept the conditions of company</label>
             </div>
             <button type="submit">Submit</button>

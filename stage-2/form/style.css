@@ -10,21 +10,25 @@ form {
     background: #f6f3f3;
     border-radius: 15px;
     outline: 3px dashed rgb(151, 89, 34);
-    & fieldset{
+    
+    & fieldset {
         display: flex;
         flex-direction: column;
         gap: 20px;
         padding: 10px 15px;
         border-radius: 15px;
         align-items: center;
+        
         & legend {
             text-align: center;
         }
-        & .form-part{
+
+        & .form-part {
             display: flex;
             flex-direction: column;
             gap: 5px;
             align-items: start;
+            
             & input {
                 width: 300px;
                 padding: 10px;
@@ -32,62 +36,110 @@ form {
                 border: 1px solid #e4e3e3;
                 caret-color: rgb(151, 89, 34);
                 
-                &:focus{
-                    outline: 1px solid rgb(151, 89, 34);
+                &:focus {
+                    outline: 2px solid rgb(242, 114, 1);
+                    outline-offset: 2px;
                 }
-                &::placeholder{
+                
+                &::placeholder {
                     font-size: 15px;
                 }
-                &[disabled]{
+                
+                &[disabled] {
                     background: rgb(111, 65, 25);
                     color: #e4e3e3;
                     font-size: 15px;
-                    cursor:grab;
+                    cursor: grab;
                 }
             }
-            & select{
+            
+            & select {
                 width: 320px;
                 padding: 10px;
                 border-radius: 10px;
                 border: 1px solid #e4e3e3;
                 font-size: 15px;
-                & option[selected]{
+                
+                &:focus {
+                    outline: 2px solid rgb(242, 114, 1);
+                    outline-offset: 2px;
+                }
+                
+                & option[value=""] {
                     color: rgb(128, 128, 128);
                 }
-                &[selected]:focus{
-                    outline: 1px solid rgb(151, 89, 34);
-                }
             }
-            & textarea{
+            
+            & textarea {
                 width: 310px;  
                 max-width: 310px;
                 border-radius: 10px;
                 border: 1px solid #e4e3e3;
                 caret-color: rgb(151, 89, 34);
-                &:focus{
-                    outline: 1px solid rgb(151, 89, 34);
+                
+                &:focus {
+                    outline: 2px solid rgb(242, 114, 1);
+                    outline-offset: 2px;
                 }
             }
         }
-        & .radio-group{
+        
+        & .radio-group {
             align-self: flex-start;
-            padding-left: 25px;
-            & .radio-option{
-                & input{
-                    width: 12px;
-                    outline: 1px #fff;
+            margin-left: 25px;
+            width: 75%;
+            border: none;
+            padding: 0;
+            
+            & legend {
+                text-align: left;
+                margin-bottom: 8px;
+            }
+            
+            & .radio-option {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 5px;
+                
+                & input {
+                    width: 16px;
+                    height: 16px;
+                    cursor: pointer;
+                    
+                    &:focus {
+                        outline: 2px solid rgb(242, 114, 1);
+                        outline-offset: 2px;
+                    }
+                }
+                
+                & label {
+                    cursor: pointer;
                 }
             }
         }
+        
         & .checkbox-group {
             flex-direction: row;
+            align-items: center;
+            gap: 8px;
+            
             & input {
-                width: 15px;
-                &:focus{
-                    outline: 1px #fff;
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+                
+                &:focus {
+                    outline: 2px solid rgb(242, 114, 1);
+                    outline-offset: 2px;
                 }
             }
+            
+            & label {
+                cursor: pointer;
+            }
         }
+        
         button {
             background: none;
             padding: 10px 0;
@@ -98,6 +150,16 @@ form {
             font-size: 16px;
             color: azure;
             font-weight: 700;
+            cursor: pointer;
+            
+            &:focus {
+                outline: 2px solid rgb(242, 114, 1);
+                outline-offset: 2px;
+            }
+            
+            &:hover {
+                background: rgb(131, 69, 14);
+            }
         }
     }
 }
