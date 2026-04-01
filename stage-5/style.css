@@ -53,12 +53,13 @@ main {
             
             &:hover {
                 background: radial-gradient(circle, #0008ff, #00ff5e);
-                transform: scale(1.1) translate(35px, -20px);
+                transform: scale(1.05) translate(10px, -10px);
                 opacity: 0.85;
             }
 
-            &:active {
-                transform: rotate(10deg) skewX(5deg) scale(1.2);
+            &:focus {
+                transform: rotateY(20deg) rotateX(15deg) scale(1.15);
+                outline: none;
             }
             
             & figure {
@@ -67,7 +68,7 @@ main {
                     opacity: 0;
                     transform: scale(0);
                     animation: image-appear 1s ease 3.5s 1 forwards;
-                    width: 80px;
+                    width: 100%;
                     margin-bottom: 15px;
                 }
 
@@ -85,7 +86,6 @@ main {
                 }
             }
 
-            
         }
     }
 }
