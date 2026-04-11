@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Form</title>
 </head>
+
 <body>
     <form action="/confirm-form" autocomplete="on" method="POST">
         <fieldset>
@@ -19,20 +21,22 @@
                 <label for="last-name">Last name:</label>
                 <input type="text" id="last-name" name="lastName" placeholder="Tolstenkov" minlength="2" required>
             </div>
-            
+
             <div class="form-part">
                 <label for="age">Age:</label>
-                <input type="text" id="age" name="age" pattern="\d*" placeholder="42" value="42" minlength="1" maxlength="3" required>
+                <input type="number" id="age" name="age" min="1" max="120" step="1" placeholder="42" value="42" required>
             </div>
 
             <div class="form-part">
                 <label for="phone-number">Phone number:</label>
-                <input type="tel" id="phone-number" name="phoneNumber" placeholder="+375291234567" pattern="^\+[1-9]\d{1,14}$" maxlength="15" required>
+                <input type="tel" id="phone-number" name="phoneNumber" placeholder="+375291234567"
+                    pattern="^\+[1-9]\d{1,14}$" maxlength="15" required>
             </div>
 
             <div class="form-part">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="***(min length = 8)" minlength="8" required>
+                <input type="password" id="password" name="password" placeholder="***(min length = 8)" minlength="8"
+                    required>
             </div>
 
             <div class="form-part">
@@ -68,7 +72,7 @@
                     <label for="radio-advertisement">From advertisement</label>
                 </div>
             </fieldset>
-            
+
             <div class="form-part">
                 <label for="disabled-input">Disabled field:</label>
                 <input type="text" id="disabled-input" name="disabledField" value="Test-data" disabled>
@@ -87,4 +91,5 @@
         </fieldset>
     </form>
 </body>
+
 </html>
